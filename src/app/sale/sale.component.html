@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <h3>Sale Information</h3>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="sale-block">
+        <table class="table">
+          <thead class="table-primary">
+            <tr>
+              <th>Description</th>
+              <th>Quantity</th>
+              <th>Each</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>aQuelle</td>
+              <td>5</td>
+              <td>R5.00</td>
+              <td>R25.00</td>
+              <td>x</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row" id="sale-amounts-div">
+          <div class="col-sm-4"><label>Discount:</label></div>
+          <div class="col-sm-4"><label>VAT:</label></div>
+          <div class="col-sm-4"><label>Balance due:</label></div>
+          <div class="col-sm-4"><label>Sub-total:</label></div>
+          <div class="col-sm-4"><label>Total:</label></div>
+          <div class="col-sm-4"><button class="btn btn-danger">Cancel Sale</button></div>
+        </div>
+        <div class="sale-buttons-div">
+          <button class="btnSale">Apply Discount</button>
+          <button class="btnSale">Enter Barcode</button>
+          <button class="btnSale">Pay</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <app-sale-categories></app-sale-categories>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,54 @@
+.button {
+
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20%;
+  height: 105px;
+  width: 125px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 12px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 25px;
+}
+
+#btnWater {
+  background-color: rgb(223, 23, 23);
+}
+
+#btnCoffee {
+  background-color: rgb(26, 167, 13);
+}
+
+#btnSnacks {
+  background-color: rgb(16, 137, 173);
+}
+
+#btnSoftDrinks {
+  background-color: rgb(133, 120, 8);
+}
+
+#btnWaterBottles {
+  background-color: rgb(178, 27, 216);
+}
+
+#btnOther {
+  background-color: orange;
+}
+
+#lblSelectCat {
+  text-align: center;
+}
+
+.cat-btns {
+  height: 400px !important;
+  overflow-y: auto;
+}

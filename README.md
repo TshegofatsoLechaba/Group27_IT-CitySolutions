@@ -1,4 +1,15 @@
-# WaterWorldPos
+# WaterWorld Point of Sale System (POS-able)
+
+## Run the following installations in your terminal.
+npm install
+npm i bootstrap
+npm i font-awesome
+
+## Other notes for the team.
+Bootstrap: Bootstrap 5.
+Icons: Font-awesome.
+Font: 'Roboto', sans-serif .
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
