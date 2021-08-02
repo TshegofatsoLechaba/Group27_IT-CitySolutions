@@ -1,9 +1,11 @@
 # WaterWorld Point of Sale System (POS-able)
 
 ## Run the following installations in your terminal.
-npm install, 
-npm i bootstrap, 
+```shell script
+npm install
+npm i bootstrap
 npm i font-awesome
+```
 
 ## Other notes for the team.
 Bootstrap: Bootstrap 5., 

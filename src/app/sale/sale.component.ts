@@ -1,3 +1,6 @@
+import { SaleService } from './../services/sale.service';
+import { HttpClient } from '@angular/common/http';
+import { Product } from './../interfaces/interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  constructor() { }
+  products:any;
 
-  ngOnInit(): void {
+  constructor(private _https:HttpClient, private _service:SaleService) { }
+
+  ngOnInit() {
+    this._service.getProducts().subscribe(data => {
+      this.products = data;
+      console.log(this.products);
+    })
   }
-
 }
