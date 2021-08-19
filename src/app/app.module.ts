@@ -6,13 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SaleComponent } from './sale/sale.component';
 import { SaleCategoriesComponent } from './sale-categories/sale-categories.component';
+import { AddProductCategoryComponent } from './add-product-category/add-product-category.component';
+import { DeleteProductCategoryComponent } from './delete-product-category/delete-product-category.component';
+import { ProductCategoryComponent } from './product-category/product-category.component';
+import { SearchProductCategoryComponent } from './search-product-category/search-product-category.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SaleComponent,
-    SaleCategoriesComponent
+    SaleCategoriesComponent,
+    AddProductCategoryComponent,
+    DeleteProductCategoryComponent,
+    ProductCategoryComponent,
+    SearchProductCategoryComponent
   ],
   imports: [
     BrowserModule,
