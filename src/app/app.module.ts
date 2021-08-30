@@ -10,6 +10,7 @@ import { AddProductCategoryComponent } from './add-product-category/add-product-
 import { DeleteProductCategoryComponent } from './delete-product-category/delete-product-category.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SearchProductCategoryComponent } from './search-product-category/search-product-category.component';
+import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SearchProductCategoryComponent } from './search-product-category/search
     AddProductCategoryComponent,
     DeleteProductCategoryComponent,
     ProductCategoryComponent,
-    SearchProductCategoryComponent
+    SearchProductCategoryComponent,
+    SupplierOrderComponent
   ],
   imports: [
     BrowserModule,
