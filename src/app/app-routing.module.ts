@@ -1,3 +1,4 @@
+import { MakeSaleComponent } from './make-sale/make-sale.component';
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
 import { SaleCategoriesComponent } from './sale-categories/sale-categories.component';
 import { SaleComponent } from './sale/sale.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path:"supplier-order-options",
     component: SupplierOrderComponent
+  },
+  {
+    path:"make-sale",
+    component: MakeSaleComponent
   }
 ];
 
