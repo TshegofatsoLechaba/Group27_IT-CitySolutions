@@ -11,6 +11,9 @@ import { DeleteProductCategoryComponent } from './delete-product-category/delete
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SearchProductCategoryComponent } from './search-product-category/search-product-category.component';
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
+import { InventoryOptionsComponent } from './inventory-options/inventory-options.component';
+import { SearchClientComponent } from './search-client/search-client.component';
+import { UpdateClientComponent } from './update-client/update-client.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { SupplierOrderComponent } from './supplier-order/supplier-order.componen
     DeleteProductCategoryComponent,
     ProductCategoryComponent,
     SearchProductCategoryComponent,
-    SupplierOrderComponent
+    SupplierOrderComponent,
+    InventoryOptionsComponent,
+    SearchClientComponent,
+    UpdateClientComponent
   ],
   imports: [
     BrowserModule,
