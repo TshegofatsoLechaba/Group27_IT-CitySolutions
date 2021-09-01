@@ -1,3 +1,4 @@
+import { MakeSaleComponent } from './make-sale/make-sale.component';
 
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
 import { SaleComponent } from './sale/sale.component';
@@ -6,12 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"",
-    component: SaleComponent
-  },
-  {
     path:"supplier-order-options",
     component: SupplierOrderComponent
+  },
+  {
+    path:"",
+    component: MakeSaleComponent
   }
 ];
 

@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { SaleService } from './services/sale.service';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,10 +16,20 @@ import { SupplierOrderComponent } from './supplier-order/supplier-order.componen
 //import { MakeSaleComponent, BarcodeDialog, PaymentDialog } from './make-sale/make-sale.component';
 
 //Material Modules
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 //API Service
 import {HttpClientModule} from '@angular/common/http';
+import { MakeSaleComponent } from './make-sale/make-sale.component';
 
 
 @NgModule({
@@ -31,17 +42,22 @@ import {HttpClientModule} from '@angular/common/http';
     ProductCategoryComponent,
     SearchProductCategoryComponent,
     SupplierOrderComponent,
+    MakeSaleComponent,
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    BrowserAnimationsModule,
+    FormsModule,
 
+  ],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}, SaleService],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
   //entryComponents:[BarcodeDialog, PaymentDialog]
 })
 export class AppModule { }
