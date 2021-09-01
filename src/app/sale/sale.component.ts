@@ -1,6 +1,5 @@
-import { SaleService } from './../services/sale.service';
+
 import { HttpClient } from '@angular/common/http';
-import { Product } from './../interfaces/interface';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -13,7 +12,7 @@ export class SaleComponent implements OnInit {
 
   products:any;
 
-  constructor( private router:Router) { }
+  constructor( private router:Router, private _https:HttpClient) { }
 
   ngOnInit() {
   
@@ -22,6 +21,6 @@ export class SaleComponent implements OnInit {
     {
       this.router.navigate(['/inventory-options']);
     }
-       
   }
+
 

@@ -1,0 +1,85 @@
+
+<div class="row">
+  <div class="col">
+    <div class="TableDiv">
+      <!--Sale table-->
+      <table class="table">
+        <thead class="table-primary">
+          <tr>
+            <th class="hcol">Description</th>
+            <th class="hcol">Qty</th>
+            <th class="hcol">Each</th>
+            <th class="hcol">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of CartItems">
+            <th scope="row">{{item._Product_Size?.ProductName}} ({{item._Product_Size?.Size + " " + item._Product_Size?.Measurement}})</th>
+            <td><button class="AddMinus" (click)="DecreaseQuantity(item._Product_Size_ID)">-</button>{{item.Quantity}}<button class="AddMinus" (click)="IncreaseQuantity(item._Product_Size_ID, item._Product_Size?.QuantityOnHand, item.Quantity)">+</button></td>
+            <td>{{item._Product_Size?.Price | currency:'R'}}</td>
+            <td>{{item._Product_Size?.Price * item.Quantity | currency:'R'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--Amounts Groupbox-->
+    <div class="row" id="sale-amounts-div">
+      <div class="col-sm-4"><label>Discount: R0.00</label></div>
+      <div class="col-sm-4"><label>VAT: {{TotalVAT | currency:'R'}}</label></div>
+      <div class="col-sm-4"><label>Balance due: {{BalanceDue | currency:'R'}}</label></div>
+      <div class="col-sm-4"><label>Sub-total: {{SubTotal | currency:'R'}}</label></div>
+      <div class="col-sm-4"><label>Total: {{BalanceDue | currency:'R'}}</label></div>
+      <div class="col-sm-4"><button class="btn btn-danger" (click)="CancelSale()">Cancel Sale</button></div>
+    </div>
+
+    <!--Sale Buttons GroupBox-->
+    <div class="ButtonBox">
+      <button class="btnSale">Apply Discount</button>
+      <button class="btnSale" (click)="EnterBarcode()">Enter Barcode</button>
+      <button class="btnSale" (click)="Pay()">Pay</button>
+    </div>
+  </div>
+  <div class="col">
+    <div *ngIf="!CategorySelected else items "> <!--this is where it changes-->
+      <div class="Category">
+        <h2>Select Category <p (click)="AddCategory()" class="AddCategory" style="float: right;">+</p>
+        </h2>
+      </div>
+      <div>
+        <mat-grid-list class="Categories" cols="2" rowHeight="{{rowHeight}}">
+          <mat-grid-tile class="matTitle" *ngFor="let items of CategoryList; let i = index">
+            <button [ngStyle]="{'background-color': getButtonColor(i)}" (click)="SelectCategory(items.ProductCategory_ID)" class="Cat-Button"
+              value="bold">{{items.ProductCategory_Name}}</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #items>  <!--this is the secondary view for Category/Items-->
+  <div class="Category">
+    <h2>
+      <button mat-mini-fab mat-dialog-close (click)="Back()" style="float: left;" color="primary" aria-label="Example icon button with a menu icon">
+      <mat-icon>close</mat-icon>
+    </button>
+    Select Item
+    <p class="AddCategory" style="float: right;">+</p>
+    </h2>
+  </div>
+  <div>
+    <mat-grid-list class="Categories" cols="2" rowHeight="{{rowHeight}}">
+      <mat-grid-tile class="matTitle" *ngFor="let items of ItemList; let i = index">
+        <button Style="background-color: #FFFF99" (click)="SelectItem(items._Product_Size_ID)" class="Cat-Button" value="bold">
+            <span>{{items.Product?.ProductName}}</span>
+            <br>
+            <span>{{items.Size}}</span>
+            <br>
+            <span>{{items.Price | currency:'R'}}</span>
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</ng-template>

@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { SaleService } from './services/sale.service';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,25 @@ import { InventoryOptionsComponent } from './inventory-options/inventory-options
 import { SearchClientComponent } from './search-client/search-client.component';
 import { UpdateClientComponent } from './update-client/update-client.component';
 
+//components used
+//import { MakeSaleComponent, BarcodeDialog, PaymentDialog } from './make-sale/make-sale.component';
+
+//Material Modules
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+
+//API Service
+import {HttpClientModule} from '@angular/common/http';
+import { MakeSaleComponent } from './make-sale/make-sale.component';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +47,23 @@ import { UpdateClientComponent } from './update-client/update-client.component';
     SupplierOrderComponent,
     InventoryOptionsComponent,
     SearchClientComponent,
-    UpdateClientComponent
+    UpdateClientComponent,
+    MakeSaleComponent,
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}, SaleService],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  //entryComponents:[BarcodeDialog, PaymentDialog]
 })
 export class AppModule { }

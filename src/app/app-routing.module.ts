@@ -1,5 +1,6 @@
+import { MakeSaleComponent } from './make-sale/make-sale.component';
+
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
-import { SaleCategoriesComponent } from './sale-categories/sale-categories.component';
 import { SaleComponent } from './sale/sale.component';
 import { InventoryOptionsComponent } from './inventory-options/inventory-options.component';
 import { AddProductCategoryComponent } from './add-product-category/add-product-category.component';
@@ -8,10 +9,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path:"",
-    component: SaleComponent
-  },
   {
     path:"supplier-order-options",
     component: SupplierOrderComponent
@@ -30,6 +27,10 @@ const routes: Routes = [
   {
     path:"delete-product-category",
     component: DeleteProductCategoryComponent
+  },
+  {
+    path:"",
+    component: MakeSaleComponent
   }
 ];
 
