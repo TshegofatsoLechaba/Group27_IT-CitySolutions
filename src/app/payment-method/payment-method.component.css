@@ -1,0 +1,15 @@
+.icon, .action {
+  text-align: center;
+}
+
+.fa-trash {
+  color:red;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+.fa-plus-circle {
+  font-size: 1.5em;
+}

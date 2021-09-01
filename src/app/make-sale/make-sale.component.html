@@ -62,8 +62,8 @@
 <ng-template #items>  <!--this is the secondary view for Category/Items-->
   <div class="Category">
     <h2>
-      <button mat-mini-fab mat-dialog-close (click)="Back()" style="float: left;" color="primary" aria-label="Example icon button with a menu icon">
-      <mat-icon>close</mat-icon>
+      <button id="closebtn" mat-mini-fab mat-dialog-close (click)="Back()" style="float: left;" color="primary" aria-label="Example icon button with a menu icon">
+        <i id="closeItemsIcon" class="fa fa-window-close" aria-hidden="true"></i>
     </button>
     Select Item
     <p class="AddCategory" style="float: right;">+</p>

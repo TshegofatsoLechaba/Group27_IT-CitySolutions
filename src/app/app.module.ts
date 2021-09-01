@@ -30,6 +30,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 //API Service
 import {HttpClientModule} from '@angular/common/http';
 import { MakeSaleComponent } from './make-sale/make-sale.component';
+import { PaymentMethodComponent } from './payment-method/payment-method.component';
+import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edit-payment-method.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { MakeSaleComponent } from './make-sale/make-sale.component';
     SearchProductCategoryComponent,
     SupplierOrderComponent,
     MakeSaleComponent,
+    PaymentMethodComponent,
+    AddEditPaymentMethodComponent,
   ],
   imports: [
 

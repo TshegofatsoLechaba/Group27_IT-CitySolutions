@@ -1,3 +1,4 @@
+import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { MakeSaleComponent } from './make-sale/make-sale.component';
 
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path:"",
     component: MakeSaleComponent
+  },
+  {
+    path:"payment-method",
+    component: PaymentMethodComponent
   }
 ];
 

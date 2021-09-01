@@ -18,7 +18,7 @@
 }
 
 table {
-  min-height:210px !important;
+
   font-family: 'Roboto', sans-serif;
   border-collapse: unset;
 }
@@ -68,10 +68,20 @@ button:hover
     cursor: pointer;
 }
 
+#closebtn {
+  background-color: #fff;
+  border: none;
+}
+
+#closeItemsIcon {
+  font-size: 1.5em;
+  color: rgb(179, 38, 38);
+}
+
 .TableDiv
 {
-    height: 17em;
-    min-height: 40%;
+    height: 20em;
+    min-height: 20%;
 }
 
 .BalanceTable

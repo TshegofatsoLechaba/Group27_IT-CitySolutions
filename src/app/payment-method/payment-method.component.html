@@ -1,0 +1,23 @@
+<div class="container">
+  <div id="heading">
+    <h1>Payment method<i class="fa fa-plus-circle pull-right" aria-hidden="true"></i></h1>
+  </div>
+  <div>
+    <table class="table table-bordered">
+      <thead class="thead">
+        <tr>
+          <th>Method name</th>
+          <th class="action">Edit</th>
+          <th class="action">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of PaymentMethodsList">
+          <td>{{items.PaymentMethodName}}</td>
+          <td class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+          <td class="icon"><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
