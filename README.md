@@ -5,7 +5,7 @@
 npm install
 npm i bootstrap
 npm i font-awesome
-npm i @angular/material
+ng add @angular/material
 ```
 
 ## Other notes for the team.
