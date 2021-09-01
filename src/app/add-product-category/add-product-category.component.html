@@ -6,18 +6,25 @@
 <title>Add Product Category</title>
 </head>
 <body>
+
 <div>
+<h2 style = "text-align: center"> Add Product Category </h2>
+</div>
+<br>
+<div>
+
+<div style = "text-align: center">
 <label> Category Name: </label>
 <input id = "Category Name">
 <br/>
-<br/>
-<label> Category Description: </label>
-<input id = "Category Description">
-<br/>
+<br>
+<label  id = "lblCategoryDescription" > Category Description: </label>
+<textarea id = "txtCategoryDescription" ></textarea>
+<br>
 <br/>
 
-<button id= "btnAddProducts"> Add Products </button>
-
+<button id= "btnAddProducts" class="btn btn-primary"> Add Products </button>
+</div>
 </div>
 <br/>
 <div>
@@ -48,8 +55,10 @@
           </tbody>
         </table>
 </div>
-
-<button id= "btnAddProductCatCancel" class="btn btn-danger"> Cancel </button>
+<div style = "text-align: center">
+<button id= "btnAddProductCatCancel" class="btn btn-danger" > Cancel </button>
+&nbsp;&nbsp;&nbsp;
 <button id= "btnAddProducsCatSave" class="btn btn-success"> Save </button>
+</div>
 </body>
 </html>

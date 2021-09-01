@@ -11,6 +11,9 @@ import { DeleteProductCategoryComponent } from './delete-product-category/delete
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { SearchProductCategoryComponent } from './search-product-category/search-product-category.component';
 import { SupplierOrderComponent } from './supplier-order/supplier-order.component';
+import { InventoryOptionsComponent } from './inventory-options/inventory-options.component';
+import { SearchClientComponent } from './search-client/search-client.component';
+import { UpdateClientComponent } from './update-client/update-client.component';
 
 //components used
 //import { MakeSaleComponent, BarcodeDialog, PaymentDialog } from './make-sale/make-sale.component';
@@ -44,6 +47,9 @@ import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edi
     ProductCategoryComponent,
     SearchProductCategoryComponent,
     SupplierOrderComponent,
+    InventoryOptionsComponent,
+    SearchClientComponent,
+    UpdateClientComponent,
     MakeSaleComponent,
     PaymentMethodComponent,
     AddEditPaymentMethodComponent,
