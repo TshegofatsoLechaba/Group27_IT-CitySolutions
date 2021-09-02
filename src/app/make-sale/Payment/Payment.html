@@ -1,0 +1,27 @@
+<div class="header">
+    <h3 mat-dialog-title>Payment</h3>
+</div>
+
+<div mat-dialog-content class="Content">
+    <button mat-mini-fab mat-dialog-close color="primary" aria-label="Example icon button with a menu icon">
+        <mat-icon>close</mat-icon>
+    </button>
+    <div class="Payment">
+        <div>
+            <h3>Enter Amount Paid</h3>
+            <mat-form-field>
+                R <input matInput type="number" disabled [value]="BalanceDue ">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                R <input matInput type="number" [formControl]="AmountPaid" required>
+                <mat-error *ngIf="AmountPaid.invalid ">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <div mat-dialog-actions class="buttons">
+                <button mat-button style="background-color: #04d9ff;" mat-dialog-close (click)="PayCard()" type="submit">Bank Card</button>
+                <button mat-button type="button" mat-dialog-close (click)="PayCash()">Cash</button>
+            </div>
+        </div>
+    </div>
+</div>

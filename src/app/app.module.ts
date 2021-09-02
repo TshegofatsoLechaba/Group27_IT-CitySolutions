@@ -29,7 +29,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 //API Service
 import {HttpClientModule} from '@angular/common/http';
-import { MakeSaleComponent } from './make-sale/make-sale.component';
+import { BarcodeDialog, MakeSaleComponent, PaymentDialog } from './make-sale/make-sale.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edit-payment-method.component';
 
@@ -47,6 +47,8 @@ import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edi
     MakeSaleComponent,
     PaymentMethodComponent,
     AddEditPaymentMethodComponent,
+    BarcodeDialog,
+    PaymentDialog
   ],
   imports: [
 
@@ -57,6 +59,15 @@ import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edi
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule
 
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}, SaleService],

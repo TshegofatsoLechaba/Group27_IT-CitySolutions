@@ -11,10 +11,10 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./make-sale.component.css']
 })
 export class MakeSaleComponent implements OnInit {
-  dialog: any;
+
 
   constructor(
-     public api: SaleService
+    public dialog: MatDialog, public api: SaleService
   ) { }
 
   //the below arrays are used to retrieve from the api
@@ -214,7 +214,7 @@ export class MakeSaleComponent implements OnInit {
 
       const dialogRef = this.dialog.open(PaymentDialog, dialogConfig);
 
-      dialogRef.afterClosed().subscribe(() => {
+      dialogRef.afterClosed().subscribe(res => {
 
           this.api.getCartItems().subscribe(data => {
             this.CartItems = data;
