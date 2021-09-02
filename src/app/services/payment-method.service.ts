@@ -15,6 +15,6 @@ export class PaymentMethodService {
   //get payment methods
   getPaymentMethods():Observable<PaymentMethodData[]>
   {
-    return this.http.get<PaymentMethodData[]>(this.url + "PaymentMethods")
+    return this.http.get<PaymentMethodData[]>(this.url + "GetPaymentMethods")
   }
 }
