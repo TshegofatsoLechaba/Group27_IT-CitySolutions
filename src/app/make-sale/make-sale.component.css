@@ -180,7 +180,10 @@ button:hover
   outline: none;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> factory
 }
 
 .mat-grid-tile-content
@@ -188,5 +191,25 @@ button:hover
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 
+=======
+.matTitle {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20%;
+  height: 105px;
+  width: 125px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 25px;
+}
+>>>>>>> factory
 
