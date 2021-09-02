@@ -48,10 +48,10 @@
       </div>
       <div>
         <mat-grid-list class="Categories" cols="2" rowHeight="{{rowHeight}}">
-          <mat-grid-tile class="matTitle" *ngFor="let items of CategoryList; let i = index">
+          <div class="matTitle" *ngFor="let items of CategoryList; let i = index">
             <button [ngStyle]="{'background-color': getButtonColor(i)}" (click)="SelectCategory(items.ProductCategory_ID)" class="Cat-Button"
               value="bold">{{items.ProductCategory_Name}}</button>
-          </mat-grid-tile>
+          </div>
         </mat-grid-list>
       </div>
     </div>

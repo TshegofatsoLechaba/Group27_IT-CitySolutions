@@ -1,0 +1,72 @@
+.header
+{
+
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+h3
+{
+    background-color: "#04d9ff";
+}
+
+.search
+{
+    margin: 20px;
+    justify-content: center;
+}
+
+.search input
+{
+    margin-right: 30px;
+    width: 70%;
+    font-size: 12pt;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.search button
+{
+    font-size: 11pt;
+    border-radius: 5px;
+    width: auto;
+}
+
+button:hover
+{
+    cursor: pointer;
+}
+
+.search table
+{
+    width: 100%;
+}
+
+.search th
+{
+    border: 1px solid black;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.buttons
+{
+    float: right;
+}
+
+.buttons button
+{
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.Payment
+{
+    text-align: center;
+    justify-content: center;
+}
+
+.Content
+{
+    max-height: 95%;
+}

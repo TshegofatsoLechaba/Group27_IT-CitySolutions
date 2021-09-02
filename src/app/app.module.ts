@@ -22,19 +22,20 @@ import { UpdateClientComponent } from './update-client/update-client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 //API Service
 import {HttpClientModule} from '@angular/common/http';
-import { MakeSaleComponent } from './make-sale/make-sale.component';
+import { BarcodeDialog, MakeSaleComponent, PaymentDialog } from './make-sale/make-sale.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edit-payment-method.component';
+import { MatRippleModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -53,9 +54,10 @@ import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edi
     MakeSaleComponent,
     PaymentMethodComponent,
     AddEditPaymentMethodComponent,
+    BarcodeDialog,
+    PaymentDialog
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -63,11 +65,27 @@ import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edi
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonToggleModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatIconModule,
+    MatRippleModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}, SaleService],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-  //entryComponents:[BarcodeDialog, PaymentDialog]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
+  entryComponents:[BarcodeDialog, PaymentDialog]
 })
 export class AppModule { }
