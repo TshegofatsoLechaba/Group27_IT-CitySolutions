@@ -8,6 +8,7 @@ import { AddProductCategoryComponent } from './add-product-category/add-product-
 import { DeleteProductCategoryComponent } from './delete-product-category/delete-product-category.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 const routes: Routes = [
   {
@@ -36,7 +37,17 @@ const routes: Routes = [
   {
     path:"payment-method",
     component: PaymentMethodComponent
+  },
+
+  
+  {
+     path: '', pathMatch: 'full', redirectTo: 'login' 
+  },
+  {
+    path: 'login', component: LogInComponent
   }
+
+
 ];
 
 @NgModule({
