@@ -65,7 +65,6 @@ import { MatRippleModule } from '@angular/material/core';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-<<<<<<< HEAD
     ReactiveFormsModule,
     MatDialogModule,
     MatFormFieldModule,
@@ -82,18 +81,6 @@ import { MatRippleModule } from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule
-=======
-    MatDialogModule,
-    ReactiveFormsModule,
-    MatButtonToggleModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule,
-    MatToolbarModule
-
->>>>>>> factory
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}, SaleService],
   bootstrap: [AppComponent],

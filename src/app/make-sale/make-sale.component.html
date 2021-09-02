@@ -48,10 +48,10 @@
       </div>
       <div>
         <mat-grid-list class="Categories" cols="2" rowHeight="{{rowHeight}}">
-          <div class="matTitle" *ngFor="let items of CategoryList; let i = index">
+          <mat-grid-tile class="matTitle" *ngFor="let items of CategoryList; let i = index">
             <button [ngStyle]="{'background-color': getButtonColor(i)}" (click)="SelectCategory(items.ProductCategory_ID)" class="Cat-Button"
               value="bold">{{items.ProductCategory_Name}}</button>
-          </div>
+          </mat-grid-tile>
         </mat-grid-list>
       </div>
     </div>
@@ -71,7 +71,7 @@
   </div>
   <div>
     <mat-grid-list class="Categories" cols="2" rowHeight="{{rowHeight}}">
-      <mat-grid-tile class="matTitle" *ngFor="let items of ItemList; let i = index">
+      <div class="matTitle" *ngFor="let items of ItemList; let i = index">
         <button Style="background-color: #fcba03" (click)="SelectItem(items._Product_Size_ID)" class="Cat-Button" value="bold">
             <span>{{items.Product?.ProductName}}</span>
             <br>
@@ -79,7 +79,7 @@
             <br>
             <span>{{items.Price | currency:'R'}}</span>
         </button>
-      </mat-grid-tile>
+      </div>
     </mat-grid-list>
   </div>
 </ng-template>
