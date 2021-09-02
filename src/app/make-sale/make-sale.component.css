@@ -155,17 +155,33 @@ button:hover
   width: 125px;
   font-weight: bolder;
   text-transform: uppercase;
-  margin: 15px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.mat-grid-tile-content
+{
+    margin-bottom: 10px;
+}
+
+.matTitle {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20%;
+  height: 105px;
+  width: 125px;
+  font-weight: bolder;
+  text-transform: uppercase;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   margin-left: 25px;
-}
-
-.mat-grid-tile-content
-{
-    margin-bottom: 10px;
 }
 
