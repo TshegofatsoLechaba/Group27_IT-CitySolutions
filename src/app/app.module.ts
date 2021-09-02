@@ -32,7 +32,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 
@@ -83,7 +83,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
     MatGridListModule,
     MatIconModule,
     MatRippleModule,
-    FlexLayoutModule
+    AngularMaterialModule
   ],
   exports: [
     MatButtonModule,
