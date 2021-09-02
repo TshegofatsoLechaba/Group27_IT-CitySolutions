@@ -1,0 +1,30 @@
+<div  fxLayout="row" fxLayoutAlign="center center" fxFlexFill>
+
+    <mat-card fxFlex ="25">
+      <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title> POSABLE </mat-card-title>
+        <mat-card-title fxLayoutAlign="center center"> LOGIN </mat-card-title>
+      </mat-card-header>
+  
+      <form fxLayoutAlign="stretch" fxLayout = "column">
+        
+          <mat-form-field>
+            <input matInput placeholder="Username">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput placeholder="Password">
+          </mat-form-field> 
+
+        
+        <button mat-stroked-button color="accent" class="btn-block">Log In</button>
+
+        <div>
+            <mdb-checkbox [default]="true">Forgot Password ?</mdb-checkbox>
+            <button mat-stroked-button color="accent" class="btn-block"> Recover</button>
+          </div>
+
+      </form>
+    </mat-card>
+  
+  </div>

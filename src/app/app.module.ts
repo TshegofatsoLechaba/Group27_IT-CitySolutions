@@ -2,6 +2,9 @@ import { SaleService } from './services/sale.service';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AngularMaterialModule } from './angular-material.module';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SaleComponent } from './sale/sale.component';
@@ -29,6 +32,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 
 //API Service
 import {HttpClientModule} from '@angular/common/http';
@@ -36,6 +42,7 @@ import { BarcodeDialog, MakeSaleComponent, PaymentDialog } from './make-sale/mak
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edit-payment-method.component';
 import { MatRippleModule } from '@angular/material/core';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 
 @NgModule({
@@ -55,7 +62,8 @@ import { MatRippleModule } from '@angular/material/core';
     PaymentMethodComponent,
     AddEditPaymentMethodComponent,
     BarcodeDialog,
-    PaymentDialog
+    PaymentDialog,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +82,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatToolbarModule,
     MatGridListModule,
     MatIconModule,
-    MatRippleModule
+    MatRippleModule,
+    FlexLayoutModule
   ],
   exports: [
     MatButtonModule,
