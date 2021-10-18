@@ -57,6 +57,7 @@ export class SaleService {
     const params = new HttpParams().set("CashAmount", AmountPaid)
     return this.http.post(this.url + "Sale/MakeCashSale","",{params})
   }
+
 }
 
 

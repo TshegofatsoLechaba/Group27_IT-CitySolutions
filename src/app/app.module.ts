@@ -1,8 +1,7 @@
 import { SaleService } from './services/sale.service';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AngularMaterialModule } from './angular-material.module';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,16 +33,19 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 
-
-
 //API Service
 import {HttpClientModule} from '@angular/common/http';
 import { BarcodeDialog, MakeSaleComponent, PaymentDialog } from './make-sale/make-sale.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
-import { AddEditPaymentMethodComponent } from './add-edit-payment-method/add-edit-payment-method.component';
 import { MatRippleModule } from '@angular/material/core';
 import { LogInComponent } from './components/log-in/log-in.component';
-
+import { AddPaymentMethodComponent } from './add-payment-method/add-payment-method.component';
+import { GlobalConfirmComponent } from './modals/globals/global-confirm/global-confirm.component';
+import { EditPaymentMethodComponent } from './edit-payment-method/edit-payment-method.component';
+import { SupplierOptionsComponent } from './supplier-options/supplier-options.component';
+import { AddSupplierComponent } from './add-supplier/add-supplier.component';
+import { SuppliersComponent } from './suppliers/suppliers.component';
+import { EditSupplierComponent } from './edit-supplier/edit-supplier.component';
 
 @NgModule({
   declarations: [
@@ -60,12 +62,19 @@ import { LogInComponent } from './components/log-in/log-in.component';
     UpdateClientComponent,
     MakeSaleComponent,
     PaymentMethodComponent,
-    AddEditPaymentMethodComponent,
     BarcodeDialog,
     PaymentDialog,
-    LogInComponent
+    LogInComponent,
+    AddPaymentMethodComponent,
+    GlobalConfirmComponent,
+    EditPaymentMethodComponent,
+    SupplierOptionsComponent,
+    AddSupplierComponent,
+    SuppliersComponent,
+    EditSupplierComponent,
   ],
   imports: [
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -83,7 +92,6 @@ import { LogInComponent } from './components/log-in/log-in.component';
     MatGridListModule,
     MatIconModule,
     MatRippleModule,
-    AngularMaterialModule
   ],
   exports: [
     MatButtonModule,

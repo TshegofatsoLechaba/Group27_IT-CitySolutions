@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Add Supplier</h1>
+  <form [formGroup]="supplierForm" (ngSubmit)="onFormSubmit()">
+      <div class="mat-row">
+          <div class="mat-col-quarter">
+              <mat-form-field appearance="outline" class="control-w">
+                  <mat-label>Name</mat-label>
+                  <input type="text" matInput placeholder="First Name" formControlName="Supplier_Name">
+                  <mat-hint>Supplier name</mat-hint>
+              </mat-form-field>
+          </div>
+          <div class="mat-col-quarter">
+              <mat-form-field appearance="outline" class="control-w">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput placeholder="Email" formControlName="Supplier_EmailAddress">
+                  <mat-hint>Email address</mat-hint>
+              </mat-form-field>
+          </div>
+          <div class="mat-col-quarter">
+            <mat-form-field appearance="outline" class="control-w">
+                <mat-label>Cellphone number</mat-label>
+                <input type="text" matInput placeholder="Cellphone number" formControlName="Supplier_PhoneNumber">
+                <mat-hint>Cellphone number</mat-hint>
+            </mat-form-field>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" mat-raised-button color="accent" matTooltip="Submit" [disabled]="!supplierForm.valid">Create</button>
+          <a  mat-button (click)="cancel()">Cancel</a>
+      </div>
+  </form>
+
+

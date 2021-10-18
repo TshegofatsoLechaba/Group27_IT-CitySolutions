@@ -1,4 +1,4 @@
 export class PaymentMethodData {
-  PaymentMethod_ID: any;
-  PaymentMethodName: string | undefined;
+  PaymentMethod_ID?: any;
+  PaymentMethodName?: string;
 }

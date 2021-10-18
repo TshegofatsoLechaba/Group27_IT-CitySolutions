@@ -1,0 +1,19 @@
+#paymentMethod {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn {
+  margin-top: 1em;
+}
+
+#paymentMethodlabel {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2em;
+}

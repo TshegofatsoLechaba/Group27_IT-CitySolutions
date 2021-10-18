@@ -302,9 +302,10 @@ export class PaymentDialog implements OnInit {
 
     this.api.MakeSale(AmountPaid).subscribe((info:any) =>
     {
-      if(info == "success")
+      if(info = "success")
       {
-        alert("Payment successfully captured")
+        var change:any = AmountPaid-this.BalanceDue;
+        alert("SALE SUCCESSFULLY CAPTURED" + '\n' + '\n' + '\n' + "CHANGE:  R" + change.toFixed(2))
 
       }
       else

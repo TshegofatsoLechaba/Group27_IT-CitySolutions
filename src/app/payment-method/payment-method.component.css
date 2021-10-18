@@ -13,3 +13,11 @@
 .fa-plus-circle {
   font-size: 1.5em;
 }
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  text-shadow: 1.5px 0.5px grey;
+}

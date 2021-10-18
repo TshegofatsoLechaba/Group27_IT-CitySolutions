@@ -7,3 +7,4 @@ export interface Product {
   Barcode:number;
   unitPrice:number;
 }
+

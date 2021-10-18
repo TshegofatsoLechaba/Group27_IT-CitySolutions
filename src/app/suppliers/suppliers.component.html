@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="heading">
+    <h1>Suppliers<i [routerLink]="[ '/create-supplier' ]" class="fa fa-plus-circle pull-right" aria-hidden="true"></i></h1>
+  </div>
+  <div>
+    <table class="table table-bordered">
+      <thead class="thead">
+        <tr>
+          <th>Supplier</th>
+          <th>Email</th>
+          <th>Cellphone number</th>
+          <th class="action">Edit</th>
+          <th class="action">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of supplierList">
+          <td>{{supplier.Supplier_Name}}</td>
+          <td>{{supplier.Supplier_EmailAddress}}</td>
+          <td>{{supplier.Supplier_PhoneNumber}}</td>
+          <td class="icon"><i [routerLink]="['/edit', supplier.Supplier_ID]" class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+          <td class="icon"><i class="fa fa-trash" aria-hidden="true" (click)="deleteSupplier(supplier.Supplier_ID)"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
